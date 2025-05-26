@@ -1,7 +1,9 @@
+// src/components/submission-form.tsx
 'use client';
 
 import { useEffect } from 'react';
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState } from 'react'; // Updated usage
+import { useFormStatus } from 'react-dom'; // Corrected import for useFormStatus
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader2 } from 'lucide-react';
@@ -34,7 +36,7 @@ function SubmitButton() {
 }
 
 export function SubmissionForm() {
-  const [state, formAction] = useFormState(submitFormAction, initialState);
+  const [state, formAction] = useActionState(submitFormAction, initialState);
   const { toast } = useToast();
 
   const form = useForm<SubmissionFormData>({
