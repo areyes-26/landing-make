@@ -95,10 +95,10 @@ export function SubmissionForm() {
       <CardContent>
         <form action={formAction} className="space-y-6">
           <div className="space-y-2">
-            <Label htmlFor="suggestedTitle">Suggested Title</Label>
+            <Label htmlFor="suggestedTitle">Titulo Sugerido</Label>
             <Input
               id="suggestedTitle"
-              placeholder="Enter a catchy title for the video"
+              placeholder="Describe el tema principal del video a generar"
               {...register('suggestedTitle')}
               aria-invalid={errors.suggestedTitle ? "true" : "false"}
             />
@@ -106,10 +106,10 @@ export function SubmissionForm() {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="suggestedContent">Suggested Content</Label>
+            <Label htmlFor="suggestedContent">Contenido Sugerido</Label>
             <Textarea
               id="suggestedContent"
-              placeholder="Describe the content suggestion in detail"
+              placeholder="Describe en detalle el contenido del video a generar"
               rows={5}
               {...register('suggestedContent')}
               aria-invalid={errors.suggestedContent ? "true" : "false"}
@@ -121,7 +121,7 @@ export function SubmissionForm() {
             <Label htmlFor="avatarId">Avatar ID</Label>
             <Input
               id="avatarId"
-              placeholder="Enter the Avatar ID"
+              placeholder="Ingresa el Avatar ID (Heygen)"
               {...register('avatarId')}
               aria-invalid={errors.avatarId ? "true" : "false"}
             />
